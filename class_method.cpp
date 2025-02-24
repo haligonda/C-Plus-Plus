@@ -2,18 +2,18 @@
 #include <string>
 using namespace std;
 
+class Car {
+    public:
+        string brand;
+        string model;
+        int year;
+        int speed(int maxSpeed) {
+            return maxSpeed;
+        }
+};
+
 int main() {
 
-    class Car {
-        public:
-            string brand;
-            string model;
-            int year;
-
-            int speed(int maxSpeed) {
-                return maxSpeed;
-            }
-    };
 
     Car car1;
     car1.brand = "Range Rover";
