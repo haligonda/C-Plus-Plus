@@ -19,9 +19,13 @@ Car::Car(string x, string y, int z) {
 }
 
 void Car::print() {
+    cout << "====================" << endl;
+    cout << "Car Details: " << endl;
     cout << "Brand: " << brand << endl;
     cout << "Model: " << model << endl;
-    cout << "Year: " << year << endl << "\n";
+    cout << "Year: " << year << endl;
+    cout << "====================" << endl << endl;
+
 }
 
 int main() {
