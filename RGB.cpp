@@ -1,30 +1,24 @@
 #include <iostream>
 using namespace std;
 
+enum RGB {
+    RED,
+    GREEN,
+    BLUE
+};
+
+string rgbToString(RGB color) {
+    switch (color) {
+        case RED: return "Red";
+        case GREEN: return "Green";
+        case BLUE: return "Blue";
+        default: return "Unknown";
+    }
+}
+
 int main() {
 
-    enum RGB {
-        RED,
-        GREEN,
-        BLUE
-    };
-
     enum RGB color = RED;
-
-    switch (color) {
-
-        case(RED):
-            cout << "Red";
-            break;
-        
-        case(GREEN):
-            cout << "Green";
-            break;
-
-        case(BLUE):
-            cout << "Blue";
-            break;
+    cout << "The color is: " << rgbToString(color) << endl;
 
     }
-
-}
