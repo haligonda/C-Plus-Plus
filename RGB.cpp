@@ -16,9 +16,20 @@ string rgbToString(RGB color) {
     }
 }
 
+void printColor(RGB color) {
+    cout << "The color is: " << rgbToString(color) << endl;
+}
+
 int main() {
 
-    enum RGB color = RED;
-    cout << "The color is: " << rgbToString(color) << endl;
+    RGB color1 = RED;
+    RGB color2 = GREEN;
+    RGB color3 = BLUE;
+    
+    printColor(color1);
+    printColor(color2);
+    printColor(color3);
 
-    }
+    return 0;
+
+}
