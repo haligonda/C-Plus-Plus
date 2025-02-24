@@ -7,17 +7,21 @@ class Car {
         string brand;
         string model;
         int year;
-        Car(string x, string y, int z) {
-            brand = x;
-            model = y;
-            year = z;
-        }
+        Car(string x, string y, int z);
 
         void print();
 };
 
-void Car::print() {
+Car::Car(string x, string y, int z) {
+    brand = x;
+    model = y;
+    year = z;
+}
 
+void Car::print() {
+    cout << "Brand: " << brand << endl;
+    cout << "Model: " << model << endl;
+    cout << "Year: " << year << endl << "\n";
 }
 
 int main() {
@@ -26,19 +30,14 @@ int main() {
     Car firstCar("Range Rover", "Sport", 2025);
 
     //Print values
-    cout << "Brand: " << firstCar.brand << endl;
-    cout << "Model: " << firstCar.model << endl;
-    cout << "Year: " << firstCar.year << endl << "\n";
+    firstCar.print();
 
     // New Object
     Car carObj2("Ford", "Mustang", 1969);
 
     //Print values
-    cout << "Brand: " << carObj2.brand << endl;
-    cout << "Model: " << carObj2.model << endl;
-    cout << "Year: " << carObj2.year << endl;
+    carObj2.print();
 
     return 0;
-
 
 }
