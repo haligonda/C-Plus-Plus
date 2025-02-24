@@ -7,10 +7,13 @@ class Car {
         string brand;
         string model;
         int year;
-        int speed(int maxSpeed) {
-            return maxSpeed;
-        }
+        int speed(int maxSpeed);
 };
+
+int Car::speed(int maxSpeed) {
+    return maxSpeed;
+}
+
 
 int main() {
 
