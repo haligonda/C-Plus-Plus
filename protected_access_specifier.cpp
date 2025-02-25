@@ -3,7 +3,7 @@
 using namespace std;
 
 class Car {
-    private:
+    protected:
         string brand;
         string model;
         int year;
@@ -17,12 +17,11 @@ class Car {
         string getBrand();
         string getModel();
         int getYear();
-
-        // Setter Method
+        
+        //Setter methods
         void setBrand(string x);
         void setModel(string y);
         void setYear(int z);
-
 };
 
 Car::Car(string x, string y, int z) {
@@ -32,21 +31,17 @@ Car::Car(string x, string y, int z) {
 }
 
 void Car::print() {
-    cout << "==========================" << endl;
-    cout << "|      Car Details       |" << endl;
-    cout << "==========================" << endl;
-    cout << "     Brand:  " << brand << endl;
-    cout << "     Model:  " << model << endl;
-    cout << "     Year:   " << year << endl;
-    cout << "==========================" << endl << endl;
+    cout << "=========================" << endl;
+    cout << "       Car Details       " << endl;
+    cout << "=========================" << endl;
+    cout << "    Brand: " << brand << endl;
+    cout << "    Model: " << model << endl;
+    cout << "    Year:  " << year << endl;
+    cout << "=========================" << endl << endl;
 
 }
 
-// Getter and Setter //
-// access and modify //
-// private member variables //
-
-// Getter Methods
+//Getter methods
 string Car::getBrand() {
     return brand;
 }
@@ -59,7 +54,6 @@ int Car::getYear() {
     return year;
 }
 
-//Setter Methods
 void Car::setBrand(string x) {
     brand = x;
 }
@@ -71,6 +65,22 @@ void Car::setModel(string y) {
 void Car::setYear(int z) {
     year = z;
 }
+
+class SportsCar : public Car {
+    public:
+    SportsCar(string x, string y, int z) : Car(x, y, z) {}
+
+    void printSportsCarDetails() {
+        cout << "=========================" << endl;
+        cout << "   Sports Car Details    " << endl;
+        cout << "=========================" << endl;
+        cout << "    Brand: " << brand << endl;
+        cout << "    Model: " << model << endl;
+        cout << "    Year:  " << year << endl;
+        cout << "=========================" << endl << endl;
+
+    }
+};
 
 int main() {
 
@@ -85,6 +95,6 @@ int main() {
     carObj1.setYear(2021);
     carObj1.print();
 
-    return 0;
-
+    SportsCar sportsCarObj("Ferrari", "488", 2022);
+    sportsCarObj.printSportsCarDetails();
 }
