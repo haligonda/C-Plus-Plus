@@ -1,2 +1,6 @@
 *.exe
 /.vscode
+# Compiled binaries
+*.out
+test_*
+a.out
