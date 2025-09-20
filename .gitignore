@@ -1,2 +1,7 @@
 *.exe
 /.vscode
+# Compiled executables
+a.out
+test
+*.o
+*.obj
